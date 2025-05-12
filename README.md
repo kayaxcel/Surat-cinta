@@ -1,2 +1,83 @@
-# Surat-cinta
-Hallo 
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Surat Cinta Untukmu Dari Saif</title>
+  <style>
+    body {
+      background: #ffe6e6;
+      color: #4b2e2e;
+      font-family: 'Georgia', serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      text-align: center;
+    }
+
+    .envelope {
+      background: #fff0f5;
+      border: 2px solid #ffb6c1;
+      border-radius: 10px;
+      padding: 40px;
+      max-width: 600px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .heart {
+      font-size: 3rem;
+      animation: beat 1s infinite;
+      color: #ff3366;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.3); }
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: #ff6699;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <div class="envelope">
+    <div class="heart">❤️</div>
+    <h1>Hai, Cintaku dari saif</h1>
+    <p>Klik tombol di bawah ini untuk membuka hatiku...</p>
+    <button onclick="showLove()">Buka Hati</button>
+    <div id="loveMessage" class="hidden">
+      <p>
+        Aku menulis ini bukan karena aku pandai merangkai kata,<br>
+        tapi karena aku ingin kamu tahu...<br><br>
+
+        Setiap hari bersamamu adalah anugerah.<br>
+        Senyummu adalah semangatku, dan hadirmu adalah bahagiaku.<br><br>
+
+        Aku mencintaimu, hari ini, esok, dan selamanya. 💖
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function showLove() {
+      const message = document.getElementById('loveMessage');
+      message.classList.remove('hidden');
+    }
+  </script>
+</body>
+</html>
